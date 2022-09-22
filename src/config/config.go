@@ -1,21 +1,15 @@
 package config
 
-//ServerConfiguration exported
-type ServerConfigurations struct {
-	Port int
-}
+type Config struct {
+	Server struct {
+		Port string `yaml:"port"`
+	} `yaml:"server"`
+	Database struct {
+		DBName     string `yaml:"DBName"`
+		DBUser     string `yaml:"DBUser"`
+		DBPassword string `yaml:"DBPassword"`
+	} `yaml:"database"`
 
-//Configurations exported
-type Configurations struct {
-	Server       ServerConfigurations
-	Database     DatabaseConfiguration
-	EXAMPLE_PATH string
-	EXAMPLE_var  string
-}
-
-// DatabaseConfiguration  exported
-type DatabaseConfiguration struct {
-	DBName     string
-	DBUser     string
-	DBPassword string
+	EXAMPLE_PATH string `yaml:"EXAMPLE_PATH"`
+	EXAMPLE_var  string `yaml:"EXAMPLE_VAR"`
 }

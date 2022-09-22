@@ -2,10 +2,10 @@ server:
   port: 8080
 
 database:
-  DBName:
-  DBUser: "dbuser"
-  DBPassword: "dbpassword"
+  DBName: "test_db"
+  DBUser: "user"
+  DBPassword: "password"
 
 
-EXAMPLE_VAR: "variable from config.yml"
-EXAMPLE_PATH: "path from config.yml"
+EXAMPLE_VAR: "variable from config.go"
+EXAMPLE_PATH: "path from config.go"
