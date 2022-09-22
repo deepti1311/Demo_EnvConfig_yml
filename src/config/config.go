@@ -19,12 +19,3 @@ type DatabaseConfiguration struct {
 	DBUser     string
 	DBPassword string
 }
-
-//var configuration c.Configurations
-
-////Reading variable using the model
-//fmt.Println("\n\nReading variables using the model...")
-//fmt.Println("Database is\t", configuration.Database.DBName)
-//fmt.Println("port is \t\t", configuration.Server.Port)
-//fmt.Println("EXAMPLE_PATH is\t", configuration.EXAMPLE_PATH)
-//fmt.Println("EXAMPLE_VAR is\t", configuration.EXAMPLE_var)

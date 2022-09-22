@@ -1,6 +1,7 @@
 package main
 
 import (
+	c "Demo_EnvConfig_yml/src/config"
 	"fmt"
 	"github.com/spf13/viper"
 )
@@ -29,6 +30,14 @@ func main() {
 	if err != nil {
 		fmt.Printf("unable to decode into struct, %v", err)
 	}
+	var configuration c.Configurations
+
+	//Reading variable using the model
+	fmt.Println("\n\nReading variables using the model...")
+	fmt.Println("Database is\t", configuration.Database.DBName)
+	fmt.Println("port is \t\t", configuration.Server.Port)
+	fmt.Println("EXAMPLE_PATH is\t", configuration.EXAMPLE_PATH)
+	fmt.Println("EXAMPLE_VAR is\t", configuration.EXAMPLE_var)
 
 	//Reading variable without using the model
 	fmt.Println("\n\nReading variables without using the model...")
